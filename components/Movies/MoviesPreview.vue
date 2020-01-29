@@ -5,6 +5,8 @@
               :style="{ backgroundImage:'url(https://image.tmdb.org/t/p/original' + poster_path + ')' }"></div>
         <div class="post-content">
           <h1>{{ title }}</h1>
+          <h1>Average Vote: {{ vote_average }}/10</h1>
+          <h1>Date Of Release: {{ release_date }}</h1>
         </div>
       </article>
     </nuxt-link>
@@ -29,6 +31,14 @@ export default {
        poster_path: {
            type: String,
            required: true
+       },
+       vote_average:{
+         type: Number,
+         required: true
+       },
+       release_date:{
+         type: String,
+         required: true
        }
    }
 }

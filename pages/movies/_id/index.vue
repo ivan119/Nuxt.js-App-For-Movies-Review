@@ -1,5 +1,6 @@
 <template>
 <div>
+ <!--Single movie details by ID -->
   <div class="post-background" :style="{ backgroundImage:'url(https://image.tmdb.org/t/p/original' + loadedMovies.backdrop_path + ')' }"></div> 
     <div class="single-post-page">
      <article class="post-preview">
@@ -8,15 +9,14 @@
         <div class="post-content">
           <h1>{{ loadedMovies.title }}</h1>
           <hr>
-          <h3>Release Date: {{ loadedMovies.release_date }}</h3>
-          <hr>
           <h3>Average Vote: {{ loadedMovies.vote_average }}/10</h3>
+          <hr>
+          <h3>Date Of Release: {{ loadedMovies.release_date }}</h3>
           <hr>
           <h3>Overview:</h3>
           <h4>{{ loadedMovies.overview }}</h4>
           <hr>
           <br>
-          
         </div>
       </article>
     </div>
@@ -66,14 +66,13 @@ export default {
 .post-background {
   width: 100%;
   height: 250px;
-  background-position: center;
   background-size: cover;
 }
 .single-post-page {
   padding: 30px;
   text-align: center;
   box-sizing: border-box;
-  margin-top: 5%;
+  margin-top: 2.5%;
 }
 
 .post-thumbnail {
