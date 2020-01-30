@@ -66,7 +66,7 @@
     methods: {
       async submitForm() {
         console.log(this.formInput)
-        alert('Form is submited')
+        alert('Thank You! The Form Is Submitted Successfully!')
         this.$router.push({name:'index'})
       }
     }

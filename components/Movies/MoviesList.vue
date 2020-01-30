@@ -80,7 +80,6 @@ export default {
 }
 .input {
   width: 60%;
-  height: 36px;
   border-radius: 2px;
   }
 .movies-list {
@@ -93,6 +92,12 @@ export default {
 }
 .text{
   text-align: center;
+}
+
+@media (min-width: 1601px) {
+  .input {
+    height: 50px; 
+  }
 }
 
 </style>>

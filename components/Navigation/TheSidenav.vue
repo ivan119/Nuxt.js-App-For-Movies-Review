@@ -12,6 +12,8 @@
         class="nav-list"
         @click="$emit('close')">
         <li class="nav-item"><nuxt-link to="/movies">Movies</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/popular">Popular</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/upcoming">Upcoming</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/about">About</nuxt-link></li>
       </ul>
     </div>
@@ -50,8 +52,9 @@ export default {
 
 .sidenav {
   height: 100%;
-  width: 300px;
-  background-color: white;
+  width: 100%;
+  background-image: url('https://wallpaperaccess.com/full/1159285.jpg');
+  background-size: cover;
   z-index: 10000;
   position: fixed;
   top: 0;
@@ -62,7 +65,7 @@ export default {
 
 .slide-side-enter-active,
 .slide-side-leave-active {
-  transition: all 0.5s ease-out;
+  transition: all 0.9s ease-out;
 }
 .slide-side-enter,
 .slide-side-leave-to {

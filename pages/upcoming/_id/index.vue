@@ -51,6 +51,7 @@ export default {
 .post-background {
   width: 100%;
   height: 250px;
+ background-position: center;
   background-size: cover;
 }
 .single-post-page {

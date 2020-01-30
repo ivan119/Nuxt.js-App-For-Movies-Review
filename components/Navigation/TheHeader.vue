@@ -42,7 +42,7 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: black;
+  background-color: #292c2f;
   z-index: 100;
   box-sizing: border-box;
   padding: 0 20px;

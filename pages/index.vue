@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
     <section class="intro">
-      <h1>Best Movies Overview</h1>
+      <h1>Best Movies Reviews</h1>
     </section>
     <MoviesList :movies="loadedMovies" /> 
   </div>

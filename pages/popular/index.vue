@@ -50,7 +50,7 @@ export default {
   width: 90%;
   font-size: 1.5rem;
   color: black;
-  background-color: rgb(40, 240, 173);
+  background-color: #3b8070;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 3px 3px 3px black;
