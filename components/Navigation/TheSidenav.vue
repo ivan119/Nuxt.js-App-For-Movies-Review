@@ -80,6 +80,9 @@ export default {
 
 .nav-item {
   margin: 20px 0;
+  position: center;
+  text-align: center;
+
 }
 
 .nav-item a {
@@ -90,6 +93,7 @@ export default {
 
 .nav-item a:hover,
 .nav-item a:active {
-  color: red;
+  color: #3b8070;
 }
+
 </style>

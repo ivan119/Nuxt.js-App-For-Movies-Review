@@ -53,7 +53,6 @@ export default {
   background-position: center;
   background-size: cover;
 }
-
 .intro h1 {
   position: absolute;
   top: 10%;
@@ -69,13 +68,6 @@ export default {
   border: 1px solid black;
   text-align: center;
 }
-
-@media (min-width: 768px) {
-  .intro h1 {
-    font-size: 2rem;
-  }
-}
-
 .featured-posts {
   display: flex;
   padding: 20px;
@@ -84,5 +76,9 @@ export default {
   align-items: center;
   justify-content: center;
 }
-
+@media (min-width: 768px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+}
 </style>

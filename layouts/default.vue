@@ -6,9 +6,10 @@
       @close="displaySidenav = false"
      />
     <nuxt />
+  <!--Footer-->      
     <footer class="footer-distributed">
             <div class="footer-left">
-                    <img src="https://www.themoviedb.org/assets/2/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png" width="408px" height="161px" alt="">
+                    <img class="img" src="https://www.themoviedb.org/assets/2/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png">
                 </div>
             <div class="footer-center">
                 <div>
@@ -18,7 +19,7 @@
                 <br>
                 <div>
                     <i class="fa fa-phone"></i>
-                    <p>+1 777 888 999</p>
+                    <p>+777 888 999</p>
                 </div>     
             </div>
             <div class="footer-right">
@@ -263,7 +264,6 @@ body{
     margin-top: 6%;
 	
 	}
- 
 	.footer-distributed .footer-left,
 	.footer-distributed .footer-center,
 	.footer-distributed .footer-right{
@@ -280,6 +280,10 @@ body{
 		line-height: normal;
 		font-size: auto;
 	}
+  .img{
+     width:208px;
+     height: 140px;
+  }
  
 }
 </style>

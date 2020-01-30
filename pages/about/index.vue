@@ -3,6 +3,7 @@
     <section class="intro">
       <h1>About</h1>
     </section>
+  <!--About us -->      
     <div class="contanier">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
@@ -17,6 +18,7 @@
                 </div>
             </div>
      </div>
+  <!--Contact us -->      
     <section class="contact-us">
             <div class="container">
                 <div class="row">
@@ -35,12 +37,12 @@
                     <form class="form" id="myForm" @submit.prevent="submitForm">
                         <div class="row">
                             <div class="col-md-4">
-                                <input type="text" v-model="formInput.name" class="form-control" id="name" placeholder="Name">
-                                <input type="emil" v-model="formInput.email" class="form-control" id="email" placeholder="Email">
-                                <input type="text" v-model="formInput.subject" class="form-control" id="subject" placeholder="Subject">
+                                <input type="text" v-model="formInput.name" class="form-control" id="name" placeholder="Name" required>
+                                <input type="email" v-model="formInput.email" class="form-control" id="email" placeholder="Email" required>
+                                <input type="text" v-model="formInput.subject" class="form-control" id="subject" placeholder="Subject" required>
                             </div>
                             <div class="col-md-8">
-                                <textarea v-model="formInput.text" class="form-control" placeholder="Enter text here..." name="" id="message" cols="30" rows="20"></textarea>
+                                <textarea v-model="formInput.text" class="form-control" placeholder="Enter text here..." name="" id="message" cols="30" rows="20" required></textarea>
                                 <button type="submit" class="button--green">Submit</button>
                             </div>
                         </div>
@@ -65,7 +67,7 @@
     },
     methods: {
       async submitForm() {
-        console.log(this.formInput)
+        // console.log(this.formInput)
         alert('Thank You! The Form Is Submitted Successfully!')
         this.$router.push({name:'index'})
       }
@@ -80,7 +82,7 @@
   position: relative;
   padding: 30px;
   box-sizing: border-box;
-  background-image: url('https://cdn.mos.cms.futurecdn.net/LSnvRUxYe64Lg7qrMzCGQd.jpg');
+  background-image: url('https://i.pinimg.com/originals/9b/88/b5/9b88b56b4c9c116eb26f3607f229f766.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -162,7 +164,6 @@
     height: 117px;
     resize: none;
 }
-
 .button--green {
   display: inline-block;
   width: 50%;

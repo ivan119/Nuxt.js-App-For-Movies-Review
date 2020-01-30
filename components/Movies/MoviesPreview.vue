@@ -58,13 +58,6 @@ a {
   color: black;
 }
 
-@media (min-width: 850px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
-  }
-}
-
 .post-thumbnail {
   width: 100%;
   height: 250px;
@@ -80,5 +73,11 @@ a {
 a:hover .post-content,
 a:active .post-content {
   background-color: #ccc;
+}
+@media (min-width: 850px) {
+  .post-preview {
+    width: 400px;
+    margin: 10px;
+  }
 }
 </style>

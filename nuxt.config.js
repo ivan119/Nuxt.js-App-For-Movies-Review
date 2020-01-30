@@ -1,6 +1,6 @@
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -19,10 +19,10 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#3B807' },
+  loading: { color: '#3b8070' },
   loadingIndicator: {
     name: 'circle',
-    color: '#fa923f'
+    color: '#3b8070'
   },
   /*
   ** Global CSS

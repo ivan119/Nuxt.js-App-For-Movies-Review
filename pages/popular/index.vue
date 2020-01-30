@@ -74,4 +74,19 @@ export default {
   justify-content: center;
 }
 
+
+@media (min-width: 768px) {
+  .post {
+    width: 600px;
+    margin: auto;
+  }
+  .post-preview {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .post-details {
+    flex-direction: row;
+  }
+}
+
 </style>

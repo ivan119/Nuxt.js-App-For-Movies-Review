@@ -45,9 +45,7 @@ export default {
 }
 </script>
 
-
 <style scoped>
-
 .post-background {
   width: 100%;
   height: 250px;
@@ -59,76 +57,33 @@ export default {
   box-sizing: border-box;
   margin-top: 2.5%;
 }
-
+.post-preview {
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 2px #ccc;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
 .post-thumbnail {
   width: auto;
   height: 250px;
   background-position: center;
   background-size: cover;
 }
-
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: whitesmoke;
-  width: 50%;
-  margin-left: 25%;
-  cursor: pointer;
-}
-
 .post-content {
   padding: 10px;
   text-align: center;
 }
-
-a:hover .post-content,
-a:active .post-content {
-  background-color: yellowgreen;
-}
-
-.post {
-  width: 100%;
-}
-
 @media (min-width: 768px) {
   .post {
     width: 600px;
     margin: auto;
   }
-}
-
-.post-title {
-  margin: 0;
-}
-
-.post-details {
-  padding: 10px;
-  box-sizing: border-box;
-  border-bottom: 3px solid #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-@media (min-width: 768px) {
+  .post-preview {
+    width: 80%;
+    margin-left: 10%;
+  }
   .post-details {
     flex-direction: row;
   }
-}
-
-.post-detail {
-  color: rgb(88, 88, 88);
-  margin: 0 10px;
-}
-
-.post-feedback a {
-  color: red;
-  text-decoration: none;
-}
-
-.post-feedback a:hover,
-.post-feedback a:active {
-  color: salmon;
 }
 </style>

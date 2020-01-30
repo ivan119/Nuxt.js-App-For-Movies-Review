@@ -96,9 +96,17 @@ export default {
 
 @media (min-width: 1601px) {
   .input {
-    height: 50px; 
+    height: 40px; 
   }
 }
-
+@media (max-width: 768px) {
+  .filterBox {
+    flex-direction: column-reverse;
+  }
+  .input {
+    height: 39px;
+    width: 100%; 
+  }
+}
 </style>>
 
