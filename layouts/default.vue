@@ -53,11 +53,13 @@ html {
   color: #3b8070;
   text-decoration: none;
   padding: 10px 30px;
-}
+  flex: 1 1 12%;
+  }
 
 .button--green:hover {
   color: #fff;
   background-color: #3b8070;
+  cursor: pointer;
 }
 
 .button--grey {

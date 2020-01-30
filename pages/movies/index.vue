@@ -1,5 +1,5 @@
 <template>
-    <div class="post-page">
+    <div>
       <MoviesList :movies="loadedMovies"/>
     </div>
 </template>
@@ -42,11 +42,7 @@ export default {
 }
 </script>
 
-<style scoped>
-.post-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+<style >
+
 
 </style>

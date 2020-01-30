@@ -23,7 +23,6 @@ export default {
    asyncData(context) {
     return axios.get(process.env.baseUrl + '?api_key=657cebadc3a22dde36befcc2e341cf6c')
       .then(res => {
-        console.log(res.data.items)
         return {
           loadedMovies: res.data.items
         }
