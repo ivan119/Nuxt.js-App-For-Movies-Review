@@ -1,9 +1,9 @@
 <template>
   <div class="home-page">
     <section class="intro">
-      <h1>Movies</h1>
+      <h1>Popular Movies</h1>
     </section>
-    <MoviesList :movies="loadedMovies" /> 
+    <MoviesList :movies="loadedMovies" />
   </div>
 </template>
 
@@ -17,20 +17,18 @@ export default {
   },
   data() {
     return {
-      loadedMovies: [
-        
-      ]
+      loadedMovies: []
     }
   },
    asyncData(context) {
-    return axios.get(process.env.baseUrl + '?api_key=657cebadc3a22dde36befcc2e341cf6c')
+    return axios.get('https://api.themoviedb.org/3/movie/popular' + '?api_key=657cebadc3a22dde36befcc2e341cf6c')
       .then(res => {
         return {
-          loadedMovies: res.data.items
+          loadedMovies: res.data.results
         }
       })
       .catch(e => context.error(e))
-  }   
+  }
 }
 </script>
 
@@ -52,7 +50,7 @@ export default {
   width: 90%;
   font-size: 1.5rem;
   color: black;
-  background-color: rgb(240, 103, 40);
+  background-color: rgb(40, 240, 173);
   padding: 10px;
   border-radius: 10px;
   box-shadow: 3px 3px 3px black;

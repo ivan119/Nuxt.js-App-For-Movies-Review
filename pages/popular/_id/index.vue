@@ -37,9 +37,9 @@ export default {
     }
   },
    asyncData ({ params }) {
-    return axios.get(`https://api.themoviedb.org/3/movie/${params.id}` + '?api_key=657cebadc3a22dde36befcc2e341cf6c')
+    return axios.get(`https://api.themoviedb.org/3/movie/popular/${params.id}` + '?api_key=657cebadc3a22dde36befcc2e341cf6c')
       .then((res) => {
-        return { loadedMovies: res.data }
+        return { loadedMovies: res.data.results }
       })
   }
 }

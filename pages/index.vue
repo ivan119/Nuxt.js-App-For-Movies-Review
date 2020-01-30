@@ -3,7 +3,7 @@
     <section class="intro">
       <h1>Best Movies Overview</h1>
     </section>
-    <MoviesList :movies="loadedMovies" />
+    <MoviesList :movies="loadedMovies" /> 
   </div>
 </template>
 
@@ -29,7 +29,6 @@ export default {
       })
       .catch(e => context.error(e))
   },
-
 
   /* 
    created() {

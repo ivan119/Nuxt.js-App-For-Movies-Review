@@ -5,8 +5,8 @@
       <button class="button--green" @click="bool ? sortByDescending('title') : sortByAscending('title')">Sort By Name</button>
       <button class="button--green" @click="bool ? sortByDescending('vote_average') : sortByAscending('vote_average')">Sort By Votes</button>
       <button class="button--green" @click="bool ? sortByDescending('release_date') : sortByAscending('release_date')">Sort By Release Date</button>
-      <button class="button--green">Popular</button>
-      <button class="button--green">Upcoming</button>
+      <nuxt-link class="button--green" to="/popular"><p class="text">Popular</p></nuxt-link>
+      <nuxt-link class="button--green" to="/upcoming"><p class="text">Upcoming</p></nuxt-link>
   </div>
     <section class="movies-list">
       <!--Loop for all movies fetched from server -->
@@ -32,7 +32,10 @@ export default {
   },
   data() {
     return {
-      search:''
+      search:'',
+      bool:{
+        type: Boolean
+      }
     }
   },
   props:{
@@ -88,7 +91,9 @@ export default {
   align-items: center;
   justify-content: center;
 }
-
+.text{
+  text-align: center;
+}
 
 </style>>
 
