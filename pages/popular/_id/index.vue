@@ -45,6 +45,7 @@ export default {
 }
 </script>
 
+
 <style scoped>
 .post-background {
   width: 100%;
@@ -62,16 +63,18 @@ export default {
   box-shadow: 0 2px 2px #ccc;
   background-color: whitesmoke;
   cursor: pointer;
+  display: flex;
 }
 .post-thumbnail {
-  width: auto;
-  height: 250px;
+  min-width: 40%;
+  height: auto;
   background-position: center;
   background-size: cover;
 }
 .post-content {
   padding: 10px;
   text-align: center;
+  margin-top: 4%;
 }
 @media (min-width: 768px) {
   .post {

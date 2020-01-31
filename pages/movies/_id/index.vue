@@ -4,7 +4,7 @@
   <div class="post-background" :style="{ backgroundImage:'url(https://image.tmdb.org/t/p/original' + loadedMovies.backdrop_path + ')' }"></div> 
     <div class="single-post-page">
      <article class="post-preview">
-         <div class="post-thumbnail" 
+       <div class="post-thumbnail" 
               :style="{ backgroundImage:'url(https://image.tmdb.org/t/p/original' + loadedMovies.poster_path + ')' }"></div>
         <div class="post-content">
           <h1>{{ loadedMovies.title }}</h1>
@@ -62,16 +62,18 @@ export default {
   box-shadow: 0 2px 2px #ccc;
   background-color: whitesmoke;
   cursor: pointer;
+  display: flex;
 }
 .post-thumbnail {
-  width: auto;
-  height: 250px;
+  min-width: 40%;
+  height: auto;
   background-position: center;
   background-size: cover;
 }
 .post-content {
   padding: 10px;
   text-align: center;
+  margin-top: 4%;
 }
 @media (min-width: 768px) {
   .post {
