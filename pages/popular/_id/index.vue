@@ -45,7 +45,6 @@ export default {
 }
 </script>
 
-
 <style scoped>
 .post-background {
   width: 100%;
@@ -54,6 +53,7 @@ export default {
 }
 .single-post-page {
   padding: 30px;
+  padding-left: 20;
   text-align: center;
   box-sizing: border-box;
   margin-top: 2.5%;
@@ -64,29 +64,47 @@ export default {
   background-color: whitesmoke;
   cursor: pointer;
   display: flex;
+  width: 80%;
+  margin-left: 10%;
 }
 .post-thumbnail {
   min-width: 40%;
-  height: auto;
+  height: 500px;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .post-content {
   padding: 10px;
   text-align: center;
-  margin-top: 4%;
+  margin-top: 8%;
+  margin-right: 8%;
+  width: 60%;
 }
-@media (min-width: 768px) {
+@media (max-width: 1300px){
+  .post-content{
+    margin-right: 3%;
+  }
+}
+@media (max-width: 768px) {
   .post {
     width: 600px;
     margin: auto;
   }
   .post-preview {
-    width: 80%;
-    margin-left: 10%;
+    flex-direction: column;
   }
   .post-details {
     flex-direction: row;
+  }
+  .post-thumbnail {
+  width: 100%;
+  height: 355px;
+  }
+  .post-content {
+    margin-top: 0%;
+    margin-right: 0%;
+    width: 100%;
   }
 }
 </style>

@@ -76,6 +76,25 @@ a:active .post-content {
 }
 @media (min-width: 850px) {
   .post-preview {
+    width: 350px;
+    margin: 10px;
+  }
+}
+@media (min-width: 1280px) {
+  .post-preview {
+    width: 316px;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .post-preview {
+    width: 325px;
+    margin: 10px;
+  }
+}
+@media (min-width: 1620px) {
+  .post-preview {
     width: 400px;
     margin: 10px;
   }
