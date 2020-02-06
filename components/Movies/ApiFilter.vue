@@ -7,12 +7,12 @@
       <button class="button--green" @click="filterFromApi('vote_average.asc')">Sort By Lowest Votes</button>
       <button class="button--green" @click="filterFromApi('release_date.desc')">Sort By Latest Release Date</button>
       <button class="button--green" @click="filterFromApi('release_date.asc')">Sort By Oldest Realese Date</button>
-      <input class="input" type="text" v-model="search" placeholder="Search...">
-      <button class="button--grey" @click="searchFromApi()">Search</button>
+      <input class="input" @input="searchFromApi()" type="text" v-model="search" placeholder="Search...">
+      <p class="err" v-if="!$v.search.minLength">Search must be at least 3 characters!</p>
   </div>
     <section class="movies-list">
       <!--Loop for all movies fetched from server -->
-      <MoviesPreview
+      <MoviesPreview 
         v-for="movie in filteredMovies"
         :key="movie.id"
         :id="movie.id"
@@ -20,12 +20,21 @@
         :title="movie.title"
         :vote_average="movie.vote_average"
         :release_date="movie.release_date"
-        :overview="movie.overview"/>
+        :overview="movie.overview"/>        
     </section>
+    <div class="noresults" v-if="filteredMovies == 0">
+        <article>
+        <div class="noresults-thumbnail"></div>
+        <div class="noresults-content">
+          <h1>There are no such a movies here!</h1>
+        </div>
+      </article>
+    </div>
  </div>   
 </template>
 
 <script>
+import {minLength} from 'vuelidate/lib/validators'
 import axios from 'axios'
 import MoviesPreview from '@/components/Movies/MoviesPreview'
 
@@ -37,6 +46,11 @@ export default {
     return {
       search:'',
       filteredMovies:{}
+    }
+  },
+  validations:{
+    search:{
+      minLength: minLength(3),
     }
   },  
   methods:{
@@ -50,15 +64,17 @@ export default {
     },
     /* API Search Filter */
     async searchFromApi(){
-      await axios.get('https://api.themoviedb.org/3/search/movie?api_key=657cebadc3a22dde36befcc2e341cf6c&language=en-US&query='+ this.search +'&page=1&include_adult=false')
+      if(this.search.length > 2)
+       await axios.get('https://api.themoviedb.org/3/search/movie?api_key=657cebadc3a22dde36befcc2e341cf6c&language=en-US&query='+ this.search +'&page=1&include_adult=false')
         .then((res)=>{
           this.filteredMovies = res.data.results
         })
         .catch(e => error(e))
     }
   },
-  mounted(){
-    this.filterFromApi('original_title.asc')
+  created(){
+    if(this.search.length >= 0)
+     this.filterFromApi('original_title.asc')
   }
 }
 </script>
@@ -77,10 +93,31 @@ export default {
   justify-content: space-between;
 }
 .input {
-  width: 80%;
+  width: 100%;
   border-radius: 2px;
   }
-
+.err{
+  color: red;
+}
+.noresults{
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 2px #ccc;
+  background-color: rgb(180, 175, 175);
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+}
+.noresults-thumbnail {
+  width: 100%;
+  height: 250px;
+  background-image: url('https://media.giphy.com/media/vupbanYe5f1Xq/giphy.gif');
+  background-position: center;
+  background-size: cover;
+}
+.noresults-content{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
 @media (min-width: 1601px) {
   .input {
     height: 40px; 
