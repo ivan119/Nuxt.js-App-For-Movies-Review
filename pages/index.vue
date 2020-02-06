@@ -3,82 +3,19 @@
     <section class="intro">
       <h1>Best Movies Reviews</h1>
     </section>
-    <MoviesList :movies="loadedMovies" /> 
+    <ApiFilter />
   </div>
 </template>
 
 <script>
-import MoviesList from '@/components/Movies/MoviesList'
-import axios from 'axios'
-
+import ApiFilter from '@/components/Movies/ApiFilter'
 export default {
   components: {
-    MoviesList
-  },
-  data() {
-    return {
-      loadedMovies: []
-    }
-  },
-   asyncData(context) {
-    return axios.get(process.env.baseUrl + '?api_key=657cebadc3a22dde36befcc2e341cf6c')
-      .then(res => {
-        return {
-          loadedMovies: res.data.items
-        }
-      })
-      .catch(e => context.error(e))
-  },
-
-  /* 
-   created() {
-     axios.get(
-       process.env.baseUrl + 'api_key=657cebadc3a22dde36befcc2e341cf6c')
-      .then(res => {
-        this.loadedMovies = res.data.items
-      })
-  }   
-   */
-   
+    ApiFilter,
+  }
 }
 </script>
 
 <style scoped>
-.intro {
-  height: 250px;
-  position: relative;
-  padding: 30px;
-  box-sizing: border-box;
-  background-image: url('https://cdn.mos.cms.futurecdn.net/LSnvRUxYe64Lg7qrMzCGQd.jpg');
-  background-position: center;
-  background-size: cover;
-}
-.intro h1 {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  width: 90%;
-  font-size: 1.5rem;
-  color: black;
-  background-color: rgb(240, 40, 40);
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 3px 3px 3px black;
-  box-sizing: border-box;
-  border: 1px solid black;
-  text-align: center;
-}
-.featured-posts {
-  display: flex;
-  padding: 20px;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-@media (min-width: 768px) {
-  .intro h1 {
-    font-size: 2rem;
-  }
-}
+
 </style>

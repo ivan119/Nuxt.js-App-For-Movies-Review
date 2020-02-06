@@ -77,37 +77,6 @@
 </script>
 
 <style scoped>
-.intro {
-  height: 250px;
-  position: relative;
-  padding: 30px;
-  box-sizing: border-box;
-  background-image: url('https://i.pinimg.com/originals/9b/88/b5/9b88b56b4c9c116eb26f3607f229f766.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
-.intro h1 {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  width: 90%;
-  font-size: 1.5rem;
-  color: black;
-  background-color: #3b8070;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 3px 3px 3px black;
-  box-sizing: border-box;
-  border: 1px solid black;
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  .intro h1 {
-    font-size: 2rem;
-  }
-}
 .section-title {
     margin-top: 2%;
     margin-left: 15%;

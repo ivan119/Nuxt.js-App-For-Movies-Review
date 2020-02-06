@@ -17,28 +17,22 @@ export default {
    name:'MoviePreview',
    props: {
        id: {
-           type: Number,
-           required: true
+           
        },
        title: {
-           type: String,
-           required: true
+           
        },
        overview: {
-           type: String,
-           required: true
+           
        },
        poster_path: {
-           type: String,
-           required: true
+          
        },
        vote_average:{
-         type: Number,
-         required: true
+        
        },
        release_date:{
-         type: String,
-         required: true
+        
        }
    }
 }
