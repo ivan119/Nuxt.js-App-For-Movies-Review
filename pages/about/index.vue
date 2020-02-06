@@ -35,15 +35,22 @@
             <div class="contact-us-form">
                 <div class="container">
                     <form class="form" id="myForm" @submit.prevent="submitForm">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <input type="text" v-model="formInput.name" class="form-control" id="name" placeholder="Name" required>
-                                <input type="email" v-model="formInput.email" class="form-control" id="email" placeholder="Email" required>
-                                <input type="text" v-model="formInput.subject" class="form-control" id="subject" placeholder="Subject" required>
+                        <div class="row" >
+                            <div class="col-md-4" >
+                                <input @blur="$v.name.$touch()" type="text" v-model="name" class="form-control" id="name" placeholder="Name">
+                                <p v-if="!$v.name.minLength" class="err">Name is to short! Must be at least 4 characters!</p>
+                                <p v-if="!$v.name.maxLength" class="err">Name is to Long! 20 characters max! Please enter shorter name!</p>    
+                                <input type="email" @blur="$v.email.$touch()" v-model="email" class="form-control" id="email" placeholder="Email">
+                                <p v-if="!$v.email.email" class="err">Please provide a valid email!</p>  
+                                <input @blur="$v.subject.$touch()" type="text" v-model="subject" class="form-control" id="subject" placeholder="Subject">
+                                <p v-if="!$v.subject.minLength" class="err">Subject must be at least 8 characters!</p>
+                                <p v-if="!$v.subject.maxLength" class="err">Subject to long! 40 characters max!</p>  
                             </div>
                             <div class="col-md-8">
-                                <textarea v-model="formInput.text" class="form-control" placeholder="Enter text here..." name="" id="message" cols="30" rows="20" required></textarea>
-                                <button type="submit" class="button--green">Submit</button>
+                                <textarea @blur="$v.text.$touch()" type="text" v-model="text" class="form-control" placeholder="Enter text here..." name="" id="message" cols="30" rows="20"></textarea>
+                                <p v-if="!$v.text.minLength" class="err">Text must be at least 20 characters!</p> 
+                                <p v-if="!$v.text.maxLength" class="err">Maximum length is 200 characters! Please enter shorter text!</p>  
+                                <button type="submit" :disabled="$v.$invalid" class="button--green">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -54,15 +61,36 @@
 </template>
 
 <script>
+import { required, email, minLength, maxLength } from 'vuelidate/lib/validators'
+
   export default {
     data() {
       return {
-        formInput: {
           name:'',
           email:'',
           subject:'',
           text:''
-        }
+      }
+    },
+    validations:{
+      name:{
+        required,
+        minLength: minLength(4),
+        maxLength: maxLength(20)
+      },
+      email:{
+        required,
+        email
+      },
+      subject:{
+        required,
+        minLength: minLength(8),
+        maxLength: maxLength(40)
+      },
+      text:{
+        required,
+        minLength: minLength(20),
+        maxLength: maxLength(200)
       }
     },
     methods: {
@@ -112,7 +140,7 @@
 }
 
 /* Contact Us Form */
-.contact-us-form .form-control {
+.contact-us-form .form-control{
     display: block;
     width: 50%;
     margin-left: 25%;
@@ -128,6 +156,13 @@
     margin-bottom: 15px;
     opacity: .8;
     transition: all 1s;
+}
+.err {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: -10px;
+  margin-bottom: 10px; 
+  color: red;
 }
 #message {
     height: 117px;
