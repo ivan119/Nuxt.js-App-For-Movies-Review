@@ -1,10 +1,15 @@
 <template>
 <div>
  <!--Single movie details by ID -->
-  <div class="post-background" :style="{ backgroundImage:'url(https://image.tmdb.org/t/p/original' + loadedMovies.backdrop_path + ')' }"></div> 
+  <div v-if="loadedMovies.backdrop_path === null" class="post-background" :style="{ backgroundImage:'url(http://1.bp.blogspot.com/-MTEE09qZbTU/VQM_hO_-fkI/AAAAAAAAAko/S0suQsrGcQQ/s1600/No-wallpaper-download-besplatne-pozadine-za-desktop-1920-x-1080-HDTV-1080p.jpg)' }"></div>
+  <div v-else class="post-background" :style="{ backgroundImage:'url(https://image.tmdb.org/t/p/original' + loadedMovies.backdrop_path + ')' }"></div> 
     <div class="single-post-page">
      <article class="post-preview">
-       <div class="post-thumbnail" 
+       <div v-if="loadedMovies.poster_path === null"
+              class="post-thumbnail" 
+              :style="{ backgroundImage:'url(http://www.danishdemodungeon.dk/invocator_files/no-cover-copy.png)' }"></div>
+       <div v-else
+              class="post-thumbnail" 
               :style="{ backgroundImage:'url(https://image.tmdb.org/t/p/original' + loadedMovies.poster_path + ')' }"></div>
         <div class="post-content">
           <h1>{{ loadedMovies.title }}</h1>

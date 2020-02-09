@@ -11,7 +11,7 @@
       <ul
         class="nav-list"
         @click="$emit('close')">
-        <li class="nav-item"><nuxt-link to="/movies">Movies</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/movies">Recommended</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/popular">Popular</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/upcoming">Upcoming</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/about">About</nuxt-link></li>

@@ -73,9 +73,8 @@ export default {
     }
   },
   created(){
-    if(this.search.length >= 0)
      this.filterFromApi('original_title.asc')
-  }
+  },
 }
 </script>
 
