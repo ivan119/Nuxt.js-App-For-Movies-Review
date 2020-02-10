@@ -20,7 +20,7 @@ export default {
       loadedMovies: []
     }
   },
-   asyncData(context) {
+/* asyncData(context) {
     return axios.get('https://api.themoviedb.org/3/movie/upcoming?api_key=657cebadc3a22dde36befcc2e341cf6c&page=3')
       .then(res => {
         return {
@@ -28,6 +28,12 @@ export default {
         }
       })
       .catch(e => context.error(e))
+  } */
+  async asyncData(context) {
+   let response = await axios.get('https://api.themoviedb.org/3/movie/upcoming?api_key=657cebadc3a22dde36befcc2e341cf6c&page=3')
+     return {
+       loadedMovies: response.data.results
+     }
   }
 }
 </script>

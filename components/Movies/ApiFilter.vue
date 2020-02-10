@@ -52,8 +52,27 @@ export default {
     search:{
       minLength: minLength(3),
     }
+  },
+  computed:{
+   /* Local Search Filter
+    filteredMovies(){
+      return this.movies.filter((movie) =>{
+        return movie.title.toLowerCase().match(this.search.toLowerCase())
+      })
+    }*/
   },  
   methods:{
+    /* Local Sort Filter Asc 
+    sortByAscending(prop){
+      this.movies.sort((a,b) => a[prop] < b[prop] ? -1 : 1);
+      this.bool = !this.bool  
+    },                          */
+    /* Local Sort Filter Desc 
+    sortByDescending(prop) {
+      this.movies.sort((a,b) => a[prop] < b[prop] ?  1 : -1);
+      this.bool = !this.bool
+    },                         */
+
     /* API Sort Filter */
     async filterFromApi(prop){
       await axios.get('https://api.themoviedb.org/3/discover/movie?api_key=657cebadc3a22dde36befcc2e341cf6c&language=en-US&sort_by='+ prop +'&include_adult=false&include_video=false&page=8')
@@ -101,10 +120,11 @@ export default {
 .noresults{
   border: 1px solid #ccc;
   box-shadow: 0 2px 2px #ccc;
-  background-color: rgb(180, 175, 175);
+  background-color: #ccc;
   width: 50%;
   margin-left: 25%;
   text-align: center;
+  cursor: pointer;
 }
 .noresults-thumbnail {
   width: 100%;
@@ -117,11 +137,7 @@ export default {
   margin-top: 2%;
   margin-bottom: 2%;
 }
-@media (min-width: 1601px) {
-  .input {
-    height: 40px; 
-  }
-}
+
 @media (max-width: 768px) {
   .filterBox {
     flex-direction: column;
@@ -129,6 +145,44 @@ export default {
   .input {
     height: 39px;
     width: 100%; 
+  }
+}
+@media (min-width: 760px) {
+  .post-preview {
+    width: 100%;
+    margin: 10px;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
+@media (min-width: 850px) {
+  .post-preview {
+    width: 333px;
+    margin: 10px;
+  }
+}
+@media (min-width: 1280px) {
+  .post-preview {
+    width: 355px;
+    margin: 10px;
+  }
+  .input {
+    height: 50px; 
+  }
+}
+@media (min-width: 1600px) {
+  .post-preview {
+    width: 330px;
+    margin: 10px;
+  }
+  .input {
+    height: 40px; 
+  }
+}
+@media (min-width: 1620px) {
+  .post-preview {
+    width: 400px;
+    margin: 10px;
   }
 }
 </style>>

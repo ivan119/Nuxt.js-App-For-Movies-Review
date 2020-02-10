@@ -17,12 +17,10 @@ export default {
   },
   data() {
     return {
-      loadedMovies: [
-        
-      ]
+      loadedMovies: []
     }
   },
-   async asyncData() {
+/* async asyncData() {
     return axios.get(process.env.baseUrl + '?api_key=657cebadc3a22dde36befcc2e341cf6c')
       .then(res => {
         return {
@@ -30,7 +28,13 @@ export default {
         }
       })
       .catch(e => context.error(e))
-  }
+  } */
+  async asyncData(context) {
+    let response = await axios.get(process.env.baseUrl + '?api_key=657cebadc3a22dde36befcc2e341cf6c')
+      return {
+        loadedMovies: response.data.items
+      }
+    }
 }
 </script>
 

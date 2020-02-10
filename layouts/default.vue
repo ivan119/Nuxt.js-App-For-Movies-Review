@@ -225,12 +225,11 @@ body{
   margin-top: 20px;
 }
  
- 
 .footer-distributed .footer-center{
   width: 35%;
   margin-top: 1%;
 }
- 
+
 .footer-distributed .footer-center i{
 	background-color:  #33383b;
 	color: #ffffff;
@@ -310,8 +309,7 @@ body{
 	margin-right: 3px;
 	margin-bottom: 5px;
 }
- 
- 
+
 @media (max-width: 880px) {
  
 	.footer-distributed{

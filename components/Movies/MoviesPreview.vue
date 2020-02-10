@@ -73,22 +73,30 @@ a:hover .post-content,
 a:active .post-content {
   background-color: #ccc;
 }
+@media (min-width: 760px) {
+  .post-preview {
+    width: 100%;
+    margin: 10px;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
 @media (min-width: 850px) {
   .post-preview {
-    width: 350px;
+    width: 333px;
     margin: 10px;
   }
 }
 @media (min-width: 1280px) {
   .post-preview {
-    width: 316px;
+    width: 355px;
     margin: 10px;
   }
 }
 
 @media (min-width: 1600px) {
   .post-preview {
-    width: 325px;
+    width: 330px;
     margin: 10px;
   }
 }

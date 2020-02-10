@@ -33,26 +33,6 @@ export default {
   },
   props:{
     movies:{}
-  },
-  computed: {
-    /* Local Search Filter
-    filteredMovies(){
-      return this.movies.filter((movie) =>{
-        return movie.title.toLowerCase().match(this.search.toLowerCase())
-      })
-    }*/
-  },  
-  methods:{
-    /* Local Sort Filter Asc 
-    sortByAscending(prop){
-      this.movies.sort((a,b) => a[prop] < b[prop] ? -1 : 1);
-      this.bool = !this.bool  
-    },                          */
-    /* Local Sort Filter Desc 
-    sortByDescending(prop) {
-      this.movies.sort((a,b) => a[prop] < b[prop] ?  1 : -1);
-      this.bool = !this.bool
-    },                         */
   }
 }
 </script>
