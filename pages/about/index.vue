@@ -38,8 +38,8 @@
                         <div class="row" >
                             <div class="col-md-4" >
                                 <input @blur="$v.name.$touch()" type="text" v-model="name" class="form-control" id="name" placeholder="Name">
-                                <p v-if="!$v.name.minLength" class="err">Name is to short! Must be at least 4 characters!</p>
-                                <p v-if="!$v.name.maxLength" class="err">Name is to Long! 20 characters max! Please enter shorter name!</p>    
+                                <p v-if="!$v.name.minLength" class="err">Name is to short! 4 characters min!</p>
+                                <p v-if="!$v.name.maxLength" class="err">Name is to Long! 20 characters max!</p>    
                                 <input type="email" @blur="$v.email.$touch()" v-model="email" class="form-control" id="email" placeholder="Email">
                                 <p v-if="!$v.email.email" class="err">Please provide a valid email!</p>  
                                 <input @blur="$v.subject.$touch()" type="text" v-model="subject" class="form-control" id="subject" placeholder="Subject">
@@ -49,7 +49,7 @@
                             <div class="col-md-8">
                                 <textarea @blur="$v.text.$touch()" type="text" v-model="text" class="form-control" placeholder="Enter text here..." name="" id="message" cols="30" rows="20"></textarea>
                                 <p v-if="!$v.text.minLength" class="err">Text must be at least 20 characters!</p> 
-                                <p v-if="!$v.text.maxLength" class="err">Maximum length is 200 characters! Please enter shorter text!</p>  
+                                <p v-if="!$v.text.maxLength" class="err">Text to long! Max 200 characters!</p>  
                                 <button type="submit" :disabled="$v.$invalid" class="button--green">Submit</button>
                             </div>
                         </div>
@@ -164,6 +164,7 @@ import { required, email, minLength, maxLength } from 'vuelidate/lib/validators'
   margin-top: -21px;
   padding-bottom: 10px;
   color: red;
+  white-space: nowrap;
 }
 #message {
     height: 117px;

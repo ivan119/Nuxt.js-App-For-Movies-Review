@@ -8,8 +8,8 @@
       <button class="button--green" @click="filterFromApi('release_date.desc')">Sort By Latest Release Date</button>
       <button class="button--green" @click="filterFromApi('release_date.asc')">Sort By Oldest Realese Date</button>
       <input class="input" @input="searchFromApi()" type="text" v-model="search" placeholder="Search...">
-      <p class="err" v-if="!$v.search.minLength">Search must be at least 3 characters!</p>
   </div>
+      <p class="err" v-if="!$v.search.minLength">Search must be at least 3 characters!</p>
     <section class="movies-list">
       <!--Loop for all movies fetched from server -->
       <MoviesPreview 
@@ -117,7 +117,7 @@ export default {
 .err{
   color: red;
   position: absolute;
-  margin-top: 4.2%;
+  margin-left: 6.5%;
 }
 .noresults{
   border: 1px solid #ccc;
