@@ -86,7 +86,7 @@ export default {
       if(this.search.length > 2)
        await axios.get('https://api.themoviedb.org/3/search/movie?api_key=657cebadc3a22dde36befcc2e341cf6c&language=en-US&query='+ this.search +'&page=1&include_adult=false')
         .then((res)=>{
-          this.filteredMovies = res.data.results
+           setTimeout(() => this.filteredMovies = res.data.results ,500)  
         })
         .catch(e => error(e))
     }
@@ -116,6 +116,8 @@ export default {
   }
 .err{
   color: red;
+  position: absolute;
+  margin-top: 4.2%;
 }
 .noresults{
   border: 1px solid #ccc;
