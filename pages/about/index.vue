@@ -25,7 +25,7 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="section-title">
                             <h2>Contact Us</h2>
-                            <p>Have any questions? Feel free to ask us anything by submiting this form</p>
+                            <p>Any questions? Feel free to ask us anything by submitting this form</p>
                         </div>
                     </div>
                 </div>

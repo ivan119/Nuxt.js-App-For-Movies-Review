@@ -11,6 +11,7 @@
         <li class="nav-item"><nuxt-link to="/movies">Recommended</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/popular">Popular</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/upcoming">Upcoming</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/favourites">Favourites</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/about">About</nuxt-link></li>
       </ul>
     </div>

@@ -20,91 +20,17 @@
 export default {
    name:'MoviePreview',
    props: {
-       id: {
-           
-       },
-       title: {
-           
-       },
-       overview: {
-           
-       },
-       poster_path: {
-          
-       },
-       vote_average:{
-        
-       },
-       release_date:{
-        
-       }
+       id: {},
+       title: {},
+       overview: {},
+       poster_path: {},
+       vote_average:{},
+       release_date:{}
    },
 
 }
 </script>
 
-
 <style scoped>
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: whitesmoke;
-  width: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.post-thumbnail {
-  width: 100%;
-  height: 250px;
-  background-position: center;
-  background-size: cover;
-}
-
-.post-content {
-  padding: 10px;
-  text-align: center;
-}
-
-a:hover .post-content,
-a:active .post-content {
-  background-color: #ccc;
-}
-@media (min-width: 760px) {
-  .post-preview {
-    width: 100%;
-    margin: 10px;
-    margin-left: 4%;
-    margin-right: 4%;
-  }
-}
-@media (min-width: 850px) {
-  .post-preview {
-    width: 333px;
-    margin: 10px;
-  }
-}
-@media (min-width: 1280px) {
-  .post-preview {
-    width: 355px;
-    margin: 10px;
-  }
-}
-
-@media (min-width: 1600px) {
-  .post-preview {
-    width: 330px;
-    margin: 10px;
-  }
-}
-@media (min-width: 1620px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
-  }
-}
 </style>
 

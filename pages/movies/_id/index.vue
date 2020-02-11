@@ -22,6 +22,7 @@
           <h4>{{ loadedMovies.overview }}</h4>
           <hr>
           <br>
+           <button @click="add()" class="button--green">Add To Favourites</button>
         </div>
       </article>
     </div>
@@ -38,8 +39,21 @@ export default {
   },
   data() {
     return {
-      loadedMovies: []
+      loadedMovies:{
+        id:{
+          type:Number
+        }
+      }
     }
+  },
+  methods:{
+    add () {
+      if(this.$store.state.movies.map(a =>a.id).includes(this.loadedMovies.id)){
+        alert('You have already chosen this movie as your favourite!')
+      }else{
+        this.$store.commit('addedMovies', this.loadedMovies)
+        alert('Added to favourites')
+      }}
   },
   /* async asyncData ({ params }) {
     return axios.get(`https://api.themoviedb.org/3/movie/${params.id}` + '?api_key=657cebadc3a22dde36befcc2e341cf6c')

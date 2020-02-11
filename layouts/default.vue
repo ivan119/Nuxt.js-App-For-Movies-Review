@@ -26,7 +26,7 @@
                 <p class="footer-company-about">
                  <span>About the company</span>
                  <br>
-                 Best Movies Reviews is company that make best <br> reviews of movies nowadays
+                 Best Movies Reviews is company that makes best <br> reviews of movies nowadays
                  <br>
                  <br>
                </p>
@@ -168,6 +168,90 @@ body{
   text-align: center;
 }
 
+.post-preview {
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 2px #ccc;
+  background-color: whitesmoke;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.post-thumbnail {
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+}
+
+.post-content {
+  padding: 10px;
+  text-align: center;
+}
+
+a:hover .post-content,
+a:active .post-content {
+  background-color: #ccc;
+}
+@media (min-width: 760px) {
+  .post-preview {
+    width: 100%;
+    margin: 10px;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
+@media (min-width: 850px) {
+  .post-preview {
+    width: 333px;
+    margin: 10px;
+  }
+}
+@media (min-width: 1280px) {
+  .post-preview {
+    width: 355px;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .post-preview {
+    width: 330px;
+    margin: 10px;
+  }
+}
+@media (min-width: 1620px) {
+  .post-preview {
+    width: 400px;
+    margin: 10px;
+  }
+}
+
+
+/*  Css when there are no result for searh or no favourite movies
+ */
+ .noresults{
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 2px #ccc;
+  background-color: #ccc;
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+  cursor: pointer;
+}
+.noresults-content{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.noresults-thumbnail {
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+}
 /* Footer */
 .footer-distributed{
   background-color: #292c2f;

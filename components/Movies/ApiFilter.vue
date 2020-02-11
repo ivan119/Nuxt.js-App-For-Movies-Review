@@ -26,7 +26,7 @@
         <article>
         <div class="noresults-thumbnail"></div>
         <div class="noresults-content">
-          <h1>There are no such a movies here!</h1>
+          <h1>There are no such movies here!</h1>
         </div>
       </article>
     </div>
@@ -118,28 +118,10 @@ export default {
   color: red;
   position: absolute;
   margin-left: 6.5%;
-}
-.noresults{
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: #ccc;
-  width: 50%;
-  margin-left: 25%;
-  text-align: center;
-  cursor: pointer;
-}
+} 
 .noresults-thumbnail {
-  width: 100%;
-  height: 250px;
   background-image: url('https://media.giphy.com/media/vupbanYe5f1Xq/giphy.gif');
-  background-position: center;
-  background-size: cover;
 }
-.noresults-content{
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
 @media (max-width: 768px) {
   .filterBox {
     flex-direction: column;
