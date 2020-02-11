@@ -34,7 +34,7 @@ export default {
   */
   plugins: [
     {src: '~/plugins/Vuelidate'}
-  ],
+    ],
   /*
   ** Nuxt.js dev-modules
   */

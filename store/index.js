@@ -7,9 +7,10 @@ const getters = {
 const actions = {}
 const mutations = {
     addedMovies(state,movies) {
-        state.movies.push(movies)
+        state.movies.unshift(movies)
     }
 }
+
 
 export default {
     state,
