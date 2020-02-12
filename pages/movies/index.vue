@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
     <section class="intro">
-      <h1>Movies</h1>
+      <h1>Recommended Movies</h1>
     </section>
     <MoviesList :movies="loadedMovies" /> 
   </div>
@@ -39,5 +39,8 @@ export default {
 </script>
 
 <style scoped>
+.intro {
+  background-image: url('https://cdn.mos.cms.futurecdn.net/LSnvRUxYe64Lg7qrMzCGQd.jpg');
+}
 
 </style>

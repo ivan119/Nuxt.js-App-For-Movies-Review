@@ -1,6 +1,6 @@
 <template>
     <nuxt-link :to="'/movies/' + id"  class="post-preview">
-      <article>
+      <article >
         <div v-if="poster_path === null"
                class="post-thumbnail" 
               :style="{ backgroundImage:'url(http://www.danishdemodungeon.dk/invocator_files/no-cover-copy.png)'}"></div>

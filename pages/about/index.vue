@@ -109,6 +109,7 @@ import { required, email, minLength, maxLength } from 'vuelidate/lib/validators'
     margin-top: 2%;
     margin-left: 15%;
     margin-right: 15%;
+    
 }
 .section-title h2 {
     position: relative;

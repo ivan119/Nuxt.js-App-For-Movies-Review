@@ -31,13 +31,16 @@
                  <br>
                </p>
                     <div class="footer-icons">       
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a ><i class="fab fa-facebook"></i></a>
+                    <a ><i class="fab fa-twitter"></i></a>
+                    <a ><i class="fab fa-linkedin"></i></a>
+                    <a ><i class="fab fa-github"></i></a>
                     </div>
             </div>
-                 <p class="footer-company-name">Best Movies Reviews &copy; 2020</p>
+                   <p class="footer-company-name">2020</p>
+                   <p class="footer-company-name" > &copy; </p>
+                   <p class="footer-company-name">Best Movies Reviews</p>
+                
      </footer>
   </div>
 </template>
@@ -116,7 +119,7 @@ body{
 }
 /* Header */
 .intro {
-  height: 250px;
+  height: 340px;
   position: relative;
   padding: 30px;
   box-sizing: border-box;
@@ -127,8 +130,9 @@ body{
 
 .intro h1 {
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 5%;
+  right: 5%;
   width: 90%;
   font-size: 1.5rem;
   color: black;
@@ -230,7 +234,6 @@ a:active .post-content {
   }
 }
 
-
 /*  Css when there are no result for searh or no favourite movies
  */
  .noresults{
@@ -286,7 +289,6 @@ a:active .post-content {
 .footer-distributed h3 span{
 	color:  #129CF3;
 }
- 
  
 .footer-distributed .footer-links{
 	color:  #ffffff;

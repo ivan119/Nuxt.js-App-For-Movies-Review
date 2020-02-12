@@ -22,7 +22,7 @@
           <h4>{{ loadedMovies.overview }}</h4>
           <hr>
           <br>
-           <button v-if="!this.$store.state.movies.map(a =>a.id).includes(this.loadedMovies.id)" @click="add()" class="button--green">Add To Favourites</button>
+           <button v-if="!this.$store.state.movies.map(i =>i.id).includes(this.loadedMovies.id)" @click="add()" class="button--green">Add To Favourites</button>
         </div>
       </article>
     </div>
@@ -68,6 +68,7 @@ export default {
 </script>
 
 <style scoped>
+
 .post-background {
   width: 100%;
   height: 250px;

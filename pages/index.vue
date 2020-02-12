@@ -4,6 +4,7 @@
       <h1>Best Movies Reviews</h1>
     </section>
     <ApiFilter />
+
   </div>
 </template>
 
@@ -17,5 +18,7 @@ export default {
 </script>
 
 <style scoped>
-
+.intro h1 {
+  background-color: #CC0000;
+}
 </style>

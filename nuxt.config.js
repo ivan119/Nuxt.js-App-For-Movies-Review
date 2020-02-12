@@ -19,15 +19,17 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#3b8070' },
+  loading: { color: '#3b8070', height: '4px', duration: 2000 },
   loadingIndicator: {
-    name: 'circle',
-    color: '#3b8070'
+    name: 'pulse',
+    color: '#3b8070',
+    background: 'white'
   },
   /*
   ** Global CSS
   */
   css: [
+    '~/assets/styles/main.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -57,5 +59,9 @@ export default {
   },
   env: {
     baseUrl: process.env.BASE_URL || 'https://api.themoviedb.org/3/list/1'
+  },
+  transition:{
+    name:'fade',
+    mode:'out-in'
   }
 }

@@ -7,7 +7,7 @@
       <button class="button--green" @click="filterFromApi('vote_average.asc')">Sort By Lowest Votes</button>
       <button class="button--green" @click="filterFromApi('release_date.desc')">Sort By Latest Release Date</button>
       <button class="button--green" @click="filterFromApi('release_date.asc')">Sort By Oldest Realese Date</button>
-      <input class="input" @input="searchFromApi()" type="text" v-model="search" placeholder="Search...">
+      <input class="input" @input="searchFromApi(search)" type="text" v-model="search" placeholder="Search...">
   </div>
       <p class="err" v-if="!$v.search.minLength">Search must be at least 3 characters!</p>
     <section class="movies-list">
@@ -22,10 +22,12 @@
         :release_date="movie.release_date"
         :overview="movie.overview"/>        
     </section>
-    <div class="noresults" v-if="filteredMovies == 0">
+      <div class="noresults" v-if="filteredMovies == 0">
         <article>
         <div class="noresults-thumbnail"></div>
         <div class="noresults-content">
+          <h1></h1>
+          <h1></h1>
           <h1>There are no such movies here!</h1>
         </div>
       </article>
@@ -92,19 +94,16 @@ export default {
     }
   },
   created(){
-     this.filterFromApi('original_title.asc')
+     this.filterFromApi('vote_average.desc')
   },
 }
 </script>
 
 <style scoped>
 .filterBox {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: whitesmoke;
   margin-left: 6.4%;
   margin-right: 6.4%;
-  margin-top: 1%;
+  margin-top: 0.5%;
   display: flex;
   box-sizing: border-box;
   flex-wrap: wrap;
@@ -112,7 +111,8 @@ export default {
 }
 .input {
   width: 100%;
-  border-radius: 2px;
+  border-radius: 3px;
+  margin-top: 1px;
   }
 .err{
   color: red;
@@ -125,6 +125,7 @@ export default {
 @media (max-width: 768px) {
   .filterBox {
     flex-direction: column;
+    margin-top: 4%;
   }
   .input {
     height: 39px;

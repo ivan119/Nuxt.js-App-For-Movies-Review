@@ -42,11 +42,19 @@ export default {
 
 
 <style scoped>
+
 .noresults{
   margin-top: 1%;
   margin-bottom: 5%;
+  width: 60%;
+  margin-left: 20%;
+  height: auto;
 }
+
 .noresults-thumbnail {
-  background-image: url('https://images.wallpapersden.com/image/download/missing-link-2019_64458_5120x2880.jpg');
+  background-image: url('http://getwallpapers.com/wallpaper/full/3/4/2/834923-super-heroes-wallpaper-1920x1080-photos.jpg');
+  height: 310px;
+  background-position: top;
 }
+
 </style>
